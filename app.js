@@ -5,7 +5,7 @@ Build all of your functions for displaying and gathering information below (GUI)
 
 // app is the function called to start the entire application
 function app(people){
-  console.log (people);
+  console.log(people);
   let searchType = promptFor("Do you know the name of the person you are looking for? Enter 'yes' or 'no'", yesNo).toLowerCase();
   let searchResults;
   switch(searchType){
@@ -14,9 +14,11 @@ function app(people){
       break;
     case 'no':
       // TODO: search by traits
+      searchResults = searchByTraits(people);
       break;
     default:
       app(people); // restart app
+
       break;
   }
   
@@ -35,7 +37,6 @@ function mainMenu(person, people){
   }
 
   let displayOption = prompt("Found " + person.firstName + " " + person.lastName + " . Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'");
-
   switch(displayOption){
     case "info":
     // TODO: get person's info
