@@ -15,9 +15,15 @@ function app(people){
     case 'no':
       // TODO: search by traits
       searchResults = searchByTraits(people);
+      function searchByTraits(people){
+        //prompt user for what trait they know
+        //prompt ask user what is the value of the trait
+        //loop over the array and compare the value to the user input from line 20 
+      }
       break;
     default:
       app(people); // restart app
+      
 
       break;
   }
@@ -35,10 +41,27 @@ function mainMenu(person, people){
     alert("Could not find that individual.");
     return app(people); // restart
   }
-
+ // person.first name person.last name are undefined ToDO
   let displayOption = prompt("Found " + person.firstName + " " + person.lastName + " . Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'");
   switch(displayOption){
     case "info":
+      displayPerson(person){
+      name: "billy, bob",
+      dob 1/18/1949,
+      details{
+        maritalStatus: "married";
+        occupation: "programmer";
+        height: 71;
+        weight: 175;
+        eyecolor: "brown";
+           console.log("person's name." + person.name);
+           console.log("person's dob:" + person.details.dob);
+           console.log(person.details.maritalStatus);
+           console.log(person.details.weight);
+           console.log(person.details.height);
+           console.log(person.details.eyecolor);
+      }
+      }
     // TODO: get person's info
     break;
     case "family":
